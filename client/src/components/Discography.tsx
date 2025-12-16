@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Disc3, ChevronLeft, ChevronRight } from "lucide-react";
+import { Disc3, ChevronLeft, ChevronRight, MoveHorizontal } from "lucide-react";
 import { useRef } from "react";
 
 const albums = [
@@ -86,6 +86,23 @@ export default function Discography() {
           </button>
         </div>
       </div>
+
+      {/* Mobile Scroll Indicator */}
+      <motion.div 
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ 
+          duration: 0.8,
+          repeat: Infinity,
+          repeatType: "reverse",
+          repeatDelay: 0.5
+        }}
+        className="md:hidden flex items-center justify-center gap-2 mb-6 text-white/40"
+      >
+        <MoveHorizontal className="w-5 h-5" />
+        <span className="text-sm tracking-wide">Deslize para ver mais</span>
+        <MoveHorizontal className="w-5 h-5" />
+      </motion.div>
 
       <div ref={scrollRef} className="overflow-x-auto pb-12 custom-scrollbar">
         <div className="flex px-6 gap-8 w-max">

@@ -57,8 +57,8 @@ export default function AchievementsSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
   
-  // Duplicar todos os items para criar loop infinito perfeito
-  const infiniteAchievements = [...achievements, ...achievements];
+  // Duplicar o array 3 vezes para garantir loop infinito suave
+  const infiniteAchievements = [...achievements, ...achievements, ...achievements];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -69,11 +69,11 @@ export default function AchievementsSlider() {
   }, []);
 
   useEffect(() => {
-    // Quando chegar ao final dos items originais, volta para o início
-    if (currentIndex >= achievements.length) {
+    // Quando chegar ao final do segundo conjunto, volta para o início do segundo conjunto
+    if (currentIndex >= achievements.length * 2) {
       setTimeout(() => {
         setIsTransitioning(false);
-        setCurrentIndex(0);
+        setCurrentIndex(achievements.length);
         setTimeout(() => setIsTransitioning(true), 50);
       }, 1000);
     }
@@ -104,9 +104,9 @@ export default function AchievementsSlider() {
       {/* Slider Container - Full Width */}
       <div className="relative h-32 md:h-32 overflow-hidden">
         <div 
-          className={`flex gap-4 md:gap-6 px-4 md:px-8 ${isTransitioning ? 'transition-transform duration-1000 ease-in-out' : ''}`}
+          className={`flex gap-4 md:gap-6 ${isTransitioning ? 'transition-transform duration-700 md:duration-1000 ease-in-out' : ''}`}
           style={{ 
-            transform: `translateX(calc(-${currentIndex} * 100%))`,
+            transform: `translateX(calc(-${currentIndex * 100}% - ${currentIndex * 1}rem))`,
           }}
         >
             {infiniteAchievements.map((achievement, index) => {
@@ -114,7 +114,7 @@ export default function AchievementsSlider() {
               return (
                 <motion.div
                   key={index}
-                  className="flex-shrink-0 w-full md:w-[calc(33.333%-24px)]"
+                  className="flex-shrink-0 w-full md:w-[calc(33.333%-1.333rem)]"
                   whileHover={{ scale: 1.02 }}
                 >
                   <div className={`group relative h-28 p-4 md:p-6 border transition-all duration-500 cursor-default overflow-hidden ${
