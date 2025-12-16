@@ -57,9 +57,8 @@ export default function AchievementsSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
   
-  // Duplicar os primeiros 3 items no final para criar loop infinito suave
-  const infiniteAchievements = [...achievements, ...achievements.slice(0, 3)];
-  const totalSlides = achievements.length; // 8 posições originais
+  // Duplicar todos os items para criar loop infinito perfeito
+  const infiniteAchievements = [...achievements, ...achievements];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -70,15 +69,15 @@ export default function AchievementsSlider() {
   }, []);
 
   useEffect(() => {
-    // Quando passar do último item original, volta para o início sem animação
-    if (currentIndex === totalSlides) {
+    // Quando chegar ao final dos items originais, volta para o início
+    if (currentIndex >= achievements.length) {
       setTimeout(() => {
         setIsTransitioning(false);
         setCurrentIndex(0);
         setTimeout(() => setIsTransitioning(true), 50);
       }, 1000);
     }
-  }, [currentIndex, totalSlides]);
+  }, [currentIndex]);
 
   return (
     <section className="py-12 bg-gradient-to-r from-black via-background to-black relative overflow-hidden border-t border-white/5">
