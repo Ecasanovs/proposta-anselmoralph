@@ -1,24 +1,25 @@
 import { Play, SkipBack, SkipForward, Volume2, Pause } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 
+// AVISO: Os arquivos de áudio são placeholders e não correspondem às músicas reais de Anselmo Ralph.
 const tracks = [
   { 
-    title: "Nzambi é Que Manda Mesmo", 
-    artist: "C4 Pedro", 
-    duration: "3:45",
-    src: "/music/nzambi.mp3"
+    title: "Não Me Toca", 
+    artist: "Anselmo Ralph", 
+    duration: "4:25",
+    src: "/music/nzambi.mp3" // Placeholder
   },
   { 
-    title: "Cofres do Céu", 
-    artist: "C4 Pedro", 
-    duration: "4:12",
-    src: "/music/cofres.mp3"
+    title: "Única Mulher", 
+    artist: "Anselmo Ralph", 
+    duration: "3:55",
+    src: "/music/cofres.mp3" // Placeholder
   },
   { 
-    title: "Está Tudo Bem", 
-    artist: "C4 Pedro", 
-    duration: "3:58",
-    src: "/music/tudo-bem.mp3"
+    title: "A Dor do Cupido", 
+    artist: "Anselmo Ralph", 
+    duration: "4:10",
+    src: "/music/tudo-bem.mp3" // Placeholder
   },
 ];
 
@@ -42,7 +43,6 @@ export default function MusicPlayer() {
     const handleEnded = () => {
       setIsPlaying(false);
       setProgress(0);
-      // Auto play next track
       if (currentTrack < tracks.length - 1) {
         setCurrentTrack(currentTrack + 1);
       }
@@ -60,15 +60,12 @@ export default function MusicPlayer() {
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
-
     audio.volume = volume;
   }, [volume]);
 
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
-
-    // Reset audio when track changes
     audio.load();
     setProgress(0);
     setIsPlaying(false);
@@ -77,7 +74,6 @@ export default function MusicPlayer() {
   const togglePlay = async () => {
     const audio = audioRef.current;
     if (!audio) return;
-
     try {
       if (isPlaying) {
         audio.pause();
@@ -111,30 +107,21 @@ export default function MusicPlayer() {
   const handleProgressClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const audio = audioRef.current;
     if (!audio) return;
-
     const rect = e.currentTarget.getBoundingClientRect();
     const clickX = e.clientX - rect.left;
     const width = rect.width;
     const newTime = (clickX / width) * audio.duration;
-    
     audio.currentTime = newTime;
     setProgress((newTime / audio.duration) * 100);
   };
 
   return (
     <section className="py-24 bg-background relative">
-      {/* Hidden Audio Element */}
       <audio 
         ref={audioRef}
         src={tracks[currentTrack].src}
         preload="metadata"
-        onLoadedData={() => {
-          // Audio loaded successfully
-        }}
-        onError={(e) => {
-          console.error('Audio error:', e);
-          setIsPlaying(false);
-        }}
+        onError={(e) => console.error('Audio error:', e)}
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
       />
@@ -142,7 +129,6 @@ export default function MusicPlayer() {
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
-          {/* Track List */}
           <div className="order-2 lg:order-1">
             <h3 className="text-primary font-bold tracking-[0.2em] text-sm mb-8 uppercase flex items-center gap-4">
               <span className="w-12 h-[1px] bg-primary"></span>
@@ -172,7 +158,7 @@ export default function MusicPlayer() {
                   
                   <div className="flex items-center gap-4">
                     <span className="text-white/30 text-sm font-mono">{track.duration}</span>
-                    {currentTrack === index && (
+                    {currentTrack === index && isPlaying && (
                       <div className="flex gap-1 h-4 items-end">
                         <div className="w-1 bg-primary animate-music-bar-1 h-full"></div>
                         <div className="w-1 bg-primary animate-music-bar-2 h-2/3"></div>
@@ -186,7 +172,7 @@ export default function MusicPlayer() {
             
             <div className="mt-10">
               <a 
-                href="https://c4pedro.lnk.to/Ancestralidade" 
+                href="https://open.spotify.com/artist/1ts2oIXKCpWSRFnR78bulp" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-white/60 hover:text-primary transition-colors text-sm tracking-widest uppercase font-bold"
@@ -196,20 +182,16 @@ export default function MusicPlayer() {
             </div>
           </div>
 
-          {/* Player Visual */}
           <div className="order-1 lg:order-2 relative">
             <div className="relative aspect-square bg-gradient-to-br from-white/5 to-transparent border border-white/10 p-8 flex flex-col justify-between overflow-hidden group">
-              {/* Background Blur Image */}
               <div className="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-700">
-                <img src="/images/album_ancestralidade.jpg" alt="Background" className="w-full h-full object-cover filter blur-xl scale-150" />
+                <img src="/images/anselmo_4.jpg" alt="Background" className="w-full h-full object-cover filter blur-xl scale-150" />
               </div>
               
-              {/* Album Art */}
               <div className="relative z-10 w-full aspect-square bg-black mb-8 overflow-hidden shadow-2xl">
-                <img src="/images/album_ancestralidade.jpg" alt="Album Art" className="w-full h-full object-cover" />
+                <img src="/images/anselmo_4.jpg" alt="Album Art" className="w-full h-full object-cover" />
               </div>
               
-              {/* Controls */}
               <div className="relative z-10">
                 <div className="flex justify-between items-center mb-4">
                   <div>
@@ -218,7 +200,6 @@ export default function MusicPlayer() {
                   </div>
                 </div>
                 
-                {/* Progress Bar */}
                 <div 
                   className="w-full h-1 bg-white/10 mb-6 cursor-pointer group/progress"
                   onClick={handleProgressClick}
@@ -231,7 +212,6 @@ export default function MusicPlayer() {
                   </div>
                 </div>
                 
-                {/* Buttons */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-6">
                     <button 

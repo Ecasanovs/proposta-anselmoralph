@@ -8,8 +8,8 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/60 to-background z-10" />
         <img 
-          src="/images/c4pedro_1.jpg" 
-          alt="C4 Pedro" 
+          src="/images/anselmo_1.jpg" 
+          alt="Anselmo Ralph" 
           className="w-full h-full object-cover object-top opacity-80 scale-105 animate-slow-zoom"
         />
       </div>
@@ -22,7 +22,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className="text-primary font-bold tracking-[0.2em] text-sm md:text-base mb-4 uppercase">
-            King Ckwa
+            O REI DO R&B
           </h2>
         </motion.div>
 
@@ -32,7 +32,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           className="font-display font-extrabold text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl tracking-tighter text-white mb-6 leading-none max-w-full overflow-hidden"
         >
-          ANCESTRA<br className="md:hidden" />LIDADE
+          ANSELMO<br className="md:hidden" />RALPH
         </motion.h1>
 
         <motion.p
@@ -41,8 +41,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           className="text-white/70 max-w-xl text-lg md:text-xl font-light mb-10"
         >
-          A fusão perfeita entre a tradição angolana e a sonoridade global.
-          O novo álbum já está disponível em todas as plataformas.
+         Um dos artistas mais influentes da música lusófona, conhecido por suas baladas românticas e performances energéticas.
         </motion.p>
 
         <motion.div
@@ -52,7 +51,7 @@ export default function Hero() {
           className="flex flex-col md:flex-row gap-4"
         >
           <a 
-            href="https://c4pedro.lnk.to/Ancestralidade" 
+            href="https://open.spotify.com/artist/1ts2oIXKCpWSRFnR78bulp" 
             target="_blank" 
             rel="noopener noreferrer"
             className="group relative px-8 py-4 bg-primary text-white font-bold tracking-widest overflow-hidden"

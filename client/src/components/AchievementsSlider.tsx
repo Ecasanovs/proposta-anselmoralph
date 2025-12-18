@@ -5,49 +5,49 @@ import { useEffect, useState } from "react";
 const achievements = [
   { 
     title: "Melhor Artista Lusófono", 
-    subtitle: "AFRIMMA 2017", 
+    subtitle: "MTV Africa Music Awards 2014", 
     icon: Trophy,
     type: "award"
   },
   { 
-    title: "8 Discos de Platina", 
-    subtitle: "Certificações Internacionais", 
+    title: "Melhor Artista Africano", 
+    subtitle: "MTV Europe Music Awards 2006", 
+    icon: Trophy,
+    type: "award"
+  },
+  { 
+    title: "Disco de Platina", 
+    subtitle: "A Dor do Cupido - Portugal", 
     icon: Medal,
     type: "achievement"
   },
   { 
-    title: "Melhor Artista da África Central", 
-    subtitle: "AFRIMMA 2016-2017", 
-    icon: Trophy,
-    type: "award"
-  },
-  { 
-    title: "7 Discos de Ouro", 
-    subtitle: "Vendas Certificadas", 
+    title: "Disco de Ouro", 
+    subtitle: "O Melhor de Anselmo Ralph", 
     icon: Award,
     type: "achievement"
   },
   { 
-    title: "MTV MAMA Winner", 
-    subtitle: "Melhor Artista Lusófono 2016", 
+    title: "Prêmio de Melhor Voz Masculina", 
+    subtitle: "Rádio Luanda 2007", 
     icon: Trophy,
     type: "award"
   },
   { 
-    title: "25+ Prêmios Internacionais", 
-    subtitle: "Reconhecimento Mundial", 
+    title: "Artista Angolano em Portugal", 
+    subtitle: "Primeira Platina Conquistada", 
     icon: Star,
     type: "achievement"
   },
   { 
-    title: "Cantor do Ano", 
-    subtitle: "Palop Music Stars 2015", 
+    title: "Best R&B/Soul", 
+    subtitle: "Angola Music Awards 2014", 
     icon: Trophy,
     type: "award"
   },
   { 
-    title: "Kizomba do Ano", 
-    subtitle: "Palop Music Stars 2015", 
+    title: "Album of the Year", 
+    subtitle: "Angola Music Awards 2014", 
     icon: Trophy,
     type: "award"
   }
@@ -57,7 +57,6 @@ export default function AchievementsSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
   
-  // Duplicar o array 3 vezes para garantir loop infinito suave
   const infiniteAchievements = [...achievements, ...achievements, ...achievements];
 
   useEffect(() => {
@@ -69,7 +68,6 @@ export default function AchievementsSlider() {
   }, []);
 
   useEffect(() => {
-    // Quando chegar ao final do segundo conjunto, volta para o início do segundo conjunto
     if (currentIndex >= achievements.length * 2) {
       setTimeout(() => {
         setIsTransitioning(false);
@@ -81,12 +79,10 @@ export default function AchievementsSlider() {
 
   return (
     <section className="py-12 bg-gradient-to-r from-black via-background to-black relative overflow-hidden border-t border-white/5">
-      {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-primary/20"></div>
       </div>
 
-      {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -101,7 +97,6 @@ export default function AchievementsSlider() {
         </h3>
       </motion.div>
 
-      {/* Slider Container - Full Width */}
       <div className="relative h-32 md:h-32 overflow-hidden">
         <div 
           className={`flex gap-4 md:gap-6 ${isTransitioning ? 'transition-transform duration-700 md:duration-1000 ease-in-out' : ''}`}
@@ -123,7 +118,6 @@ export default function AchievementsSlider() {
                       : 'border-white/20 bg-gradient-to-br from-white/5 to-transparent hover:border-white/30 hover:bg-white/10'
                   }`}>
                     
-                    {/* Background Glow */}
                     <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ${
                       achievement.type === 'award' 
                         ? 'bg-gradient-to-r from-primary/20 via-primary/10 to-transparent' 
@@ -131,7 +125,6 @@ export default function AchievementsSlider() {
                     }`}></div>
 
                     <div className="relative z-10 flex items-center gap-3 md:gap-4 h-full">
-                      {/* Icon */}
                       <div className={`w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 shadow-lg transition-all duration-300 ${
                         achievement.type === 'award' 
                           ? 'bg-gradient-to-br from-primary to-primary/60 shadow-primary/30 group-hover:shadow-primary/50' 
@@ -142,7 +135,6 @@ export default function AchievementsSlider() {
                         }`} />
                       </div>
 
-                      {/* Content */}
                       <div className="flex-1 min-w-0">
                         <h4 className={`font-bold text-sm md:text-lg mb-1 leading-tight transition-colors duration-300 ${
                           achievement.type === 'award' 
@@ -156,7 +148,6 @@ export default function AchievementsSlider() {
                         </p>
                       </div>
 
-                      {/* Animated Border */}
                       <div className={`absolute bottom-0 left-0 h-1 transition-all duration-500 ${
                         achievement.type === 'award' 
                           ? 'bg-gradient-to-r from-primary to-primary/60 w-0 group-hover:w-full' 

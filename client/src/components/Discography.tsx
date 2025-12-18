@@ -5,39 +5,39 @@ import { useRef } from "react";
 const albums = [
   {
     year: "2025",
-    title: "Ancestralidade",
+    title: "Lições de Amor (1ª Parte)",
     type: "Album",
-    cover: "/images/album_ancestralidade.jpg"
+    cover: "/images/anselmo_4.jpg"
   },
   {
-    year: "2019",
-    title: "The Gentleman",
-    type: "Album",
-    cover: "/images/album_gentleman.jpg"
+    year: "2022",
+    title: "Viagens",
+    type: "EP",
+    cover: "/images/anselmo_4.jpg"
   },
   {
-    year: "2015",
-    title: "King Ckwa",
+    year: "2020",
+    title: "Momentos",
     type: "Album",
-    cover: "/images/album_kingckwa.jpg"
+    cover: "/images/anselmo_4.jpg"
+  },
+  {
+    year: "2016",
+    title: "Amor é Cego",
+    type: "Album",
+    cover: "/images/anselmo_4.jpg"
   },
   {
     year: "2013",
-    title: "Los Compadres",
-    type: "Collab Album",
-    cover: "/images/album_loscompadres.jpg"
+    title: "A Dor do Cupido",
+    type: "Album",
+    cover: "/images/anselmo_4.jpg"
   },
   {
-    year: "2011",
-    title: "Calor & Frio",
+    year: "2009",
+    title: "O Cupido",
     type: "Album",
-    cover: "/images/album_calorefrio.jpg"
-  },
-  {
-    year: "2008",
-    title: "Lágrimas",
-    type: "Album",
-    cover: "/images/album_lagrimas.jpg"
+    cover: "/images/anselmo_4.jpg"
   }
 ];
 

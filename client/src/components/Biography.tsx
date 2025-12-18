@@ -20,15 +20,15 @@ export default function Biography() {
             >
               <div className="aspect-[3/4] overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 ease-in-out">
                 <img 
-                  src="/images/c4pedro_2.jpg" 
-                  alt="C4 Pedro Portrait" 
+                  src="/images/anselmo_2.jpg" 
+                  alt="Anselmo Ralph Portrait" 
                   className="w-full h-full object-cover"
                 />
               </div>
               
               {/* Floating Card */}
               <div className="absolute -bottom-6 -right-6 bg-card border border-white/10 p-6 max-w-xs shadow-2xl hidden md:block">
-                <p className="text-primary font-display font-bold text-4xl mb-1">42</p>
+                <p className="text-primary font-display font-bold text-4xl mb-1">44</p>
                 <p className="text-white/60 text-xs tracking-widest uppercase">Anos de Idade</p>
                 <div className="w-full h-[1px] bg-white/10 my-4" />
                 <p className="text-white font-bold text-lg mb-1">Luanda</p>
@@ -38,7 +38,7 @@ export default function Biography() {
             
             {/* Background Outline Text */}
             <div className="absolute -top-20 -left-20 z-0 opacity-5 pointer-events-none select-none">
-              <span className="font-display font-black text-[12rem] text-transparent stroke-text">C4</span>
+              <span className="font-display font-black text-[12rem] text-transparent stroke-text">AR</span>
             </div>
           </div>
 
@@ -56,26 +56,26 @@ export default function Biography() {
               </h3>
               
               <h2 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-8 leading-tight">
-                Pedro Henrique <br />
-                <span className="text-white/30">Lisboa Santos</span>
+                Anselmo Ralf <br />
+                <span className="text-white/30">Andrade Cordeiro</span>
               </h2>
               
               <div className="space-y-6 text-white/70 text-lg font-light leading-relaxed">
                 <p>
-                  Conhecido artisticamente como <strong className="text-white font-medium">C4 Pedro</strong>, é um dos músicos mais influentes da nova geração da música angolana. Cantor, compositor, produtor e empresário, sua versatilidade o levou a conquistar palcos internacionais.
+                  Conhecido como <strong className="text-white font-medium">Anselmo Ralph</strong>, é um dos cantores angolanos mais conhecidos internacionalmente, famoso por produzir canções românticas.
                 </p>
                 
                 <p>
-                  Nascido no Sambizanga, Luanda, mas com raízes musicais cultivadas na Bélgica, C4 Pedro funde a Kizomba tradicional com elementos de R&B, Afrohouse e Pop, criando uma sonoridade única que atravessa fronteiras.
+                  Nascido em Luanda, Angola, Anselmo Ralph foi para Nova Iorque para terminar a faculdade, onde se formou em Contabilidade. Foi em Madrid, no entanto, que foi grandemente influenciado pelo cantor dominicano Juan Luis Guerra.
                 </p>
                 
                 <p>
-                  Com múltiplos prêmios internacionais, incluindo <em className="text-white">Melhor Artista da África Central</em> e <em className="text-white">Melhor Artista Lusófono</em>, ele continua a redefinir a música africana contemporânea com seu mais recente trabalho, "Ancestralidade".
+                  Com vários prémios, incluindo um <em className="text-white">MTV Europe Music Award</em> de "Melhor Artista Africano", ele continua a ser uma força dominante na música lusófona.
                 </p>
               </div>
 
               <div className="mt-10 flex flex-wrap gap-4">
-                {["Kizomba", "R&B", "Afrohouse", "Zouk", "Pop"].map((genre) => (
+                {["R&B", "Ghetto-Zouk", "Kizomba"].map((genre) => (
                   <span key={genre} className="px-4 py-2 border border-white/10 text-xs tracking-widest uppercase text-white/60 hover:border-primary hover:text-primary transition-colors cursor-default">
                     {genre}
                   </span>

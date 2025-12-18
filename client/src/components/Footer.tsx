@@ -9,10 +9,10 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <h2 className="font-display font-black text-6xl text-white mb-8 tracking-tighter">
-              C4 PEDRO
+              ANSELMO RALPH
             </h2>
             <p className="text-white/50 max-w-md text-lg font-light">
-              Músico, compositor e produtor angolano. Levando a cultura e a sonoridade de Angola para o mundo.
+              Cantor de R&B e Ghetto-Zouk. Um dos artistas angolanos mais conhecidos internacionalmente.
             </p>
           </div>
           
@@ -34,21 +34,21 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold tracking-widest uppercase mb-8 text-sm">Social</h4>
             <div className="flex gap-4 mb-8">
-              <a href="https://www.instagram.com/c4pedro_official/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-300">
+              <a href="https://www.instagram.com/anselmoralph/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-300">
                 <Instagram size={18} />
               </a>
-              <a href="https://www.facebook.com/c4pedro/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-300">
+              <a href="https://www.facebook.com/anselmoralph/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-300">
                 <Facebook size={18} />
               </a>
-              <a href="https://twitter.com/c4pedro" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-300">
+              <a href="https://twitter.com/anselmoralph" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-300">
                 <Twitter size={18} />
               </a>
-              <a href="https://www.youtube.com/channel/UC9SXqBYyI73z-OjYJJHA6dw" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-300">
+              <a href="https://www.youtube.com/@AnselmoRalph12" target="_blank" rel="noopener noreferrer" className="w-10 h-10 border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-300">
                 <Youtube size={18} />
               </a>
             </div>
-            <a href="mailto:booking@c4pedro.net" className="text-white/80 hover:text-primary transition-colors text-sm font-mono">
-              booking@c4pedro.net
+            <a href="mailto:booking@anselmoralph.com" className="text-white/80 hover:text-primary transition-colors text-sm font-mono">
+              booking@anselmoralph.com
             </a>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/10">
           <p className="text-white/30 text-xs tracking-widest uppercase mb-4 md:mb-0">
-            © 2025 BLS Produtora. All rights reserved.
+            © 2025 Anselmo Ralph. All rights reserved.
           </p>
           <div className="flex gap-8">
             <a href="#" className="text-white/30 hover:text-white text-xs tracking-widest uppercase transition-colors">Privacy Policy</a>

@@ -20,7 +20,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/">
           <a className="text-2xl font-display font-bold tracking-tighter text-white hover:text-primary transition-colors">
-            C4 PEDRO
+            ANSELMO RALPH
           </a>
         </Link>
 
@@ -43,7 +43,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a 
-            href="https://c4pedro.lnk.to/Ancestralidade" 
+            href="https://open.spotify.com/artist/1ts2oIXKCpWSRFnR78bulp" 
             target="_blank" 
             rel="noopener noreferrer"
             className="px-6 py-2 border border-white/20 text-xs font-bold tracking-widest hover:bg-white hover:text-black transition-all duration-300"
@@ -75,7 +75,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a 
-            href="https://c4pedro.lnk.to/Ancestralidade" 
+            href="https://open.spotify.com/artist/1ts2oIXKCpWSRFnR78bulp" 
             target="_blank" 
             rel="noopener noreferrer"
             className="mt-8 px-8 py-3 border border-white/20 text-sm font-bold tracking-widest hover:bg-white hover:text-black transition-all duration-300"

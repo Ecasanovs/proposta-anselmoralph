@@ -36,8 +36,8 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-white font-bold uppercase tracking-widest mb-1">Booking & Management</h4>
-                    <a href="mailto:booking@c4pedro.net" className="text-white/60 hover:text-white transition-colors text-lg">
-                      booking@c4pedro.net
+                    <a href="mailto:booking@anselmoralph.com" className="text-white/60 hover:text-white transition-colors text-lg">
+                      booking@anselmoralph.com
                     </a>
                   </div>
                 </div>
@@ -49,7 +49,7 @@ export default function Contact() {
                   <div>
                     <h4 className="text-white font-bold uppercase tracking-widest mb-1">Telefone</h4>
                     <p className="text-white/60 text-lg">
-                      +244 923 456 789
+                      +244 923 456 789 (Representante)
                     </p>
                   </div>
                 </div>
@@ -59,7 +59,7 @@ export default function Contact() {
                     <MapPin size={20} />
                   </div>
                   <div>
-                    <h4 className="text-white font-bold uppercase tracking-widest mb-1">BLS Produtora</h4>
+                    <h4 className="text-white font-bold uppercase tracking-widest mb-1">Representação Artística</h4>
                     <p className="text-white/60 text-lg">
                       Luanda, Angola
                     </p>
