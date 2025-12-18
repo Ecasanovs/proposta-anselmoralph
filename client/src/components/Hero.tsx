@@ -30,9 +30,18 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          className="font-display font-extrabold text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl tracking-tighter text-white mb-6 leading-none max-w-full overflow-hidden"
+          className="font-display font-extrabold text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl tracking-tighter text-white mb-0 leading-none max-w-full overflow-hidden"
         >
-          ANSELMO<br className="md:hidden" />RALPH
+          ANSELMO
+        </motion.h1>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          className="font-display font-extrabold text-4xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-9xl tracking-tighter text-primary mb-6 leading-none max-w-full overflow-hidden"
+        >
+          RALPH
         </motion.h1>
 
         <motion.p

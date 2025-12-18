@@ -13,31 +13,31 @@ const albums = [
     year: "2022",
     title: "Viagens",
     type: "EP",
-    cover: "/images/anselmo_4.jpg"
+    cover: "/images/anselmo_2.jpg"
   },
   {
     year: "2020",
     title: "Momentos",
     type: "Album",
-    cover: "/images/anselmo_4.jpg"
+    cover: "/images/album_amor_cego.jpg"
   },
   {
     year: "2016",
     title: "Amor é Cego",
     type: "Album",
-    cover: "/images/anselmo_4.jpg"
+    cover: "/images/album_amor_cego_2.jpg"
   },
   {
     year: "2013",
     title: "A Dor do Cupido",
     type: "Album",
-    cover: "/images/anselmo_4.jpg"
+    cover: "/images/album_dor_cupido_2.jpg"
   },
   {
     year: "2009",
     title: "O Cupido",
     type: "Album",
-    cover: "/images/anselmo_4.jpg"
+    cover: "/images/album_cupido.jpg"
   }
 ];
 

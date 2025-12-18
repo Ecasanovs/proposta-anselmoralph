@@ -5,46 +5,46 @@ import { Play } from "lucide-react";
 
 const videos = [
   {
-    id: "nzambi",
-    title: "Nzambi é Que Manda Mesmo",
-    thumbnail: "/images/album_ancestralidade.jpg",
-    views: "1.2M Views",
-    date: "2025"
+    id: "nao_me_toca",
+    title: "Não Me Toca",
+    thumbnail: "/images/album_dor_cupido_2.jpg",
+    views: "8.5M Views",
+    date: "2012"
   },
   {
-    id: "cofres",
-    title: "Cofres do Céu",
-    thumbnail: "/images/album_gentleman.jpg",
-    views: "850K Views",
-    date: "2024"
+    id: "unica_mulher",
+    title: "Única Mulher",
+    thumbnail: "/images/album_amor_cego_2.jpg",
+    views: "6.2M Views",
+    date: "2013"
   },
   {
-    id: "esta_tudo_bem",
-    title: "Está Tudo Bem",
-    thumbnail: "/images/album_kingckwa.jpg",
-    views: "2.5M Views",
-    date: "2023"
+    id: "dor_cupido",
+    title: "A Dor do Cupido",
+    thumbnail: "/images/album_dor_cupido.jpg",
+    views: "7.8M Views",
+    date: "2011"
   },
   {
-    id: "love_again",
-    title: "Love Again (feat. Sauti Sol)",
-    thumbnail: "/images/c4pedro_1.jpg",
-    views: "5M Views",
-    date: "2017"
+    id: "um_dois",
+    title: "Um Dois",
+    thumbnail: "/images/anselmo_4.jpg",
+    views: "5.1M Views",
+    date: "2007"
   },
   {
-    id: "african_beauty",
-    title: "African Beauty (feat. DJ Maphorisa)",
-    thumbnail: "/images/c4pedro_2.jpg",
-    views: "10M Views",
-    date: "2018"
+    id: "atira_agua",
+    title: "Atira Água (feat. Nelson Freitas & Eddy Parker)",
+    thumbnail: "/images/album_amor_cego.jpg",
+    views: "4.3M Views",
+    date: "2011"
   },
   {
-    id: "vou_ter_saudades",
-    title: "Vou Ter Saudades",
-    thumbnail: "/images/c4pedro_3.jpg",
-    views: "15M Views",
-    date: "2016"
+    id: "momentos",
+    title: "Momentos",
+    thumbnail: "/images/anselmo_2.jpg",
+    views: "3.9M Views",
+    date: "2020"
   }
 ];
 
@@ -68,7 +68,7 @@ export default function Videos() {
               Latest Visuals
             </h1>
             <p className="text-white/60 max-w-2xl mx-auto text-lg font-light">
-              Mergulhe no universo visual de C4 Pedro. Videoclipes oficiais, performances ao vivo e bastidores.
+              Mergulhe no universo visual de Anselmo Ralph. Videoclipes oficiais, performances ao vivo e bastidores.
             </p>
           </motion.div>
 
@@ -114,7 +114,7 @@ export default function Videos() {
           
           <div className="mt-24 text-center">
             <a 
-              href="https://www.youtube.com/channel/UC9SXqBYyI73z-OjYJJHA6dw" 
+              href="https://www.youtube.com/@AnselmoRalph12" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 border border-white/20 text-white font-bold tracking-widest hover:bg-white hover:text-black transition-all duration-300"
